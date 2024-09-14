@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.chatiaintegrated.Controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -33,9 +29,9 @@ public class Chat {
         HttpClient client = HttpClient.newHttpClient();
         String url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key="+"AIzaSyBJ-qxWbGMLprXMiuK_yl0Yqf08-xccMn8";
         String jsonBody = "{\"contents\":[{\"parts\":[{\"text\":\""+question+"\"}]}]}";
-        //String jBody = "{\"contents\":[{\"parts\":[{\"text\":\"Explain how AI works\"}]}]}";
+       
         
-        //String jsonBoy = "{\"contents\":\"John Doe\",\"age\":30}";
+        
         
         
         
@@ -53,15 +49,14 @@ public class Chat {
 
             if (response.statusCode() == 200) {
                 return bestResponse(response.body());
-                //System.out.println("Request successful! Response: " + response.body());
-                // Processar a resposta JSON, por exemplo, usando um parser JSON
+               
             } else {
                 System.out.println("Request failed with status code: " + response.statusCode());
-                // Tratar erros com base no código de status
+               
             }
         } catch (Exception e) {
             return e.getMessage();
-            //System.out.println("An error occurred: " + e.getMessage());
+            
         }
         
         return "****";
@@ -75,10 +70,10 @@ public class Chat {
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode rootNode = objectMapper.readTree(resposta);
         String textValue = rootNode.path("candidates")
-                                  .get(0) // Assuming only one candidate
+                                  .get(0) 
                                   .path("content")
                                   .path("parts")
-                                  .get(0) // Assuming only one part
+                                  .get(0) 
                                   .path("text")
                                   .asText();
 
