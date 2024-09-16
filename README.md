@@ -14,7 +14,7 @@ que permite ao utilizador fazer questões e as respostas são dadas pelo Gemini
 
 Execução do projeto 
 
-Para executar o deves:
+como executar:
 
 1- criar um arquivo Application.preperties 
 
