@@ -15,8 +15,11 @@ que permite ao utilizador fazer questões e as respostas são dadas pelo Gemini
 Execução do projeto 
 
 como executar:
-
-1. Criar um arquivo Application.preperties dentro do pacote resources:
+1. Abra o seu diretorio de projetos com o terminal e execute o seguinte comando para clonar o projeto:
+```bash
+git clone https://github.com/JoilsonCapemba/ChatIAIntegrated.git
+```
+2. Criar um arquivo Application.preperties dentro do pacote resources:
    ```Application.preperties```
 
 3. coloque a seguinte instrucao : api.url=https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=/APY_KEY
