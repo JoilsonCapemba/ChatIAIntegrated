@@ -26,7 +26,9 @@ public class IntegrationWithAIController {
        public String chatresponse(String question) {
         HttpClient client = HttpClient.newHttpClient();
         String jsonBody = "{\"contents\":[{\"parts\":[{\"text\":\""+question+"\"}]}]}";
+        //String jBody = "{\"contents\":[{\"parts\":[{\"text\":\"Explain how AI works\"}]}]}";
         
+        //String jsonBoy = "{\"contents\":\"John Doe\",\"age\":30}";
         
         try {
         
@@ -47,12 +49,12 @@ public class IntegrationWithAIController {
 
 
             if (response.statusCode() == 200) {
-                return filterResponseInJson(response.body());
-                
-                
+                return bestResponse(response.body());
+                //System.out.println("Request successful! Response: " + response.body());
+                // Processar a resposta JSON, por exemplo, usando um parser JSON
             } else {
                 System.out.println("Request failed with status code: " + response.statusCode());
-                
+                // Tratar erros com base no código de status
             }
         } catch (Exception e) {
             return e.getMessage();
