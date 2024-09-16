@@ -16,13 +16,14 @@ Execução do projeto
 
 como executar:
 
-1- criar um arquivo Application.preperties 
+1. Criar um arquivo Application.preperties dentro do pacote resources:
+   ```Application.preperties```
 
-2- coloque a seguinte instrucao : api.url=https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=/APY_KEY
+3. coloque a seguinte instrucao : api.url=https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=/APY_KEY
 
 Nota: a APY_KEY é fornecida no site da documentacao do Gemini APi
 
-Deves ter uma conta de Dev e la podes gerar a tua APY_KEY
+Deves ter uma conta de Dev e la podes gerar a tua ```APY_KEY```
 
 
 
