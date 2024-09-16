@@ -9,7 +9,6 @@ import java.net.http.HttpResponse;
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.IOException;
 
 
 
@@ -49,12 +48,11 @@ public class IntegrationWithAIController {
 
 
             if (response.statusCode() == 200) {
-                return bestResponse(response.body());
-                //System.out.println("Request successful! Response: " + response.body());
-                // Processar a resposta JSON, por exemplo, usando um parser JSON
+                return filterResponseInJson(response.body());
+                
             } else {
                 System.out.println("Request failed with status code: " + response.statusCode());
-                // Tratar erros com base no código de status
+                
             }
         } catch (Exception e) {
             return e.getMessage();
