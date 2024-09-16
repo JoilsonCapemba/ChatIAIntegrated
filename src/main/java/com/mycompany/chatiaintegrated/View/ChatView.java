@@ -43,16 +43,17 @@ public class ChatView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 51, 51));
 
-        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 204));
+        jLabel1.setForeground(new java.awt.Color(0, 0, 102));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Chat Mini IA");
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         pergunta.setBackground(new java.awt.Color(204, 204, 204));
         pergunta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        pergunta.setSelectionColor(new java.awt.Color(255, 255, 255));
         pergunta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 perguntaActionPerformed(evt);
@@ -72,6 +73,7 @@ public class ChatView extends javax.swing.JFrame {
         resposta.setBackground(new java.awt.Color(204, 204, 204));
         resposta.setColumns(20);
         resposta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        resposta.setForeground(new java.awt.Color(51, 51, 51));
         resposta.setRows(5);
         resposta.setBorder(null);
         jScrollPane2.setViewportView(resposta);

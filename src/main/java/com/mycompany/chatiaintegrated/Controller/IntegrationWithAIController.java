@@ -1,5 +1,6 @@
 package com.mycompany.chatiaintegrated.Controller;
 
+import com.mycompany.chatiaintegrated.Services.PropetiesReaderService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 
@@ -15,7 +16,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  *
- * @author joils
+ * @author João Capemba
 */
 
 public class IntegrationWithAIController {
@@ -25,13 +26,11 @@ public class IntegrationWithAIController {
        public String chatresponse(String question) {
         HttpClient client = HttpClient.newHttpClient();
         String jsonBody = "{\"contents\":[{\"parts\":[{\"text\":\""+question+"\"}]}]}";
-        //String jBody = "{\"contents\":[{\"parts\":[{\"text\":\"Explain how AI works\"}]}]}";
         
-        //String jsonBoy = "{\"contents\":\"John Doe\",\"age\":30}";
         
         try {
         
-            PropetiesReader propertiesReader = new PropetiesReader();
+            PropetiesReaderService propertiesReader = new PropetiesReaderService();
            
             String apiUrl = propertiesReader.readUrlPropretie();
         
@@ -51,7 +50,7 @@ public class IntegrationWithAIController {
                 return filterResponseInJson(response.body());
                 
             } else {
-                System.out.println("Request failed with status code: " + response.statusCode());
+                System.out.println("Erro na resposta : " + response.statusCode());
                 
             }
         } catch (Exception e) {
@@ -64,7 +63,7 @@ public class IntegrationWithAIController {
     }
     
        
-    //Este metodo foi usado para filtrar a resposta vinda da IA Gemini pegando assim o valor do campo text que é onde esta a resposta que interessa ao utilizador 
+    //Este metodo foi usado para filtrar a resposta vinda da IA Gemini pegando assim o valor do campo "text" que é onde esta a resposta que interessa ao utilizador 
        
     public String filterResponseInJson(String geminiResponse) throws JsonProcessingException{
         ObjectMapper objectMapper = new ObjectMapper();

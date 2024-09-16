@@ -1,4 +1,4 @@
-package com.mycompany.chatiaintegrated.Controller;
+package com.mycompany.chatiaintegrated.Services;
 
 /**
  *
@@ -10,7 +10,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-public class PropetiesReader {
+public class PropetiesReaderService {
     
     public static String url = "C:\\Users\\joils\\Documents\\NetBeansProjects\\ChatIAIntegrated\\src\\main\\java\\resources\\application.properties";
     
