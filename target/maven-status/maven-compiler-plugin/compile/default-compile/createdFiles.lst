@@ -1,7 +1,8 @@
+com\mycompany\chatiaintegrated\Controller\PropetiesReader.class
 com\mycompany\chatiaintegrated\View\ChatView$3.class
 com\mycompany\chatiaintegrated\View\ChatView$1.class
+com\mycompany\chatiaintegrated\Controller\IntegrationWithAIController.class
 com\mycompany\chatiaintegrated\View\ChatView.class
-com\mycompany\chatiaintegrated\Controller\Chat.class
 com\mycompany\chatiaintegrated\ChatIAIntegrated$1.class
 com\mycompany\chatiaintegrated\ChatIAIntegrated.class
 com\mycompany\chatiaintegrated\View\ChatView$2.class

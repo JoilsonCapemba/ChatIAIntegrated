@@ -1,0 +1,30 @@
+# Diretórios compilados
+target/
+build/
+
+# Arquivos gerados por IDEs
+.idea/
+.metadata/
+.settings/
+.classpath
+.project
+
+# Arquivos de logs
+logs/
+
+# Arquivos de backup
+*.bak
+*.swp
+
+# Arquivos de dependências
+/lib/
+/target/dependency/
+
+# Arquivos de testes
+/test-outputs/
+
+# Outros arquivos a serem ignorados
+*.class
+*.log
+*.tmp
+*.properties

@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.chatiaintegrated.View;
-import com.mycompany.chatiaintegrated.Controller.Chat;
+import com.mycompany.chatiaintegrated.Controller.IntegrationWithAIController;
 
 /**
  *
@@ -46,8 +46,10 @@ public class ChatView extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 0, 153));
+        jLabel1.setForeground(new java.awt.Color(0, 0, 204));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Chat Mini IA");
+        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         pergunta.setBackground(new java.awt.Color(204, 204, 204));
         pergunta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -89,8 +91,8 @@ public class ChatView extends javax.swing.JFrame {
                 .addGap(21, 21, 21))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(141, 141, 141))
+                .addComponent(jLabel1)
+                .addGap(184, 184, 184))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,7 +124,7 @@ public class ChatView extends javax.swing.JFrame {
 
     private void sendBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendBtnActionPerformed
         // TODO add your handling code here:
-        Chat chat = new Chat();
+        IntegrationWithAIController chat = new IntegrationWithAIController();
         resposta.setText(chat.chatresponse(pergunta.getText()));    
     }//GEN-LAST:event_sendBtnActionPerformed
 
